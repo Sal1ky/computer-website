@@ -18,26 +18,6 @@ function calculateTotal() {
     var ramPrice = parseInt(document.getElementById("ram-select").value);
     var vgaPrice = parseInt(document.getElementById("vga-select").value);
 
-    //var gpuImage = document.getElementById("gpu-select").options[document.getElementById("gpu-select").selectedIndex].getAttribute("data-image");
-    //document.getElementById("gpu-image").src = gpuImage;
-    
-    // var gpuSelect = document.getElementById("gpu-select");
-    // var gpuImage = document.getElementById("gpu-image");
-    // var selectedOption = gpuSelect.options[gpuSelect.selectedIndex];
-    // var gpuImageSrc = selectedOption.getAttribute("data-image");
-    
-    // // If a valid GPU option is selected (price is not zero)
-    // if (gpuPrice !== 0) {
-    //     // Update the image source to the selected GPU image
-    //     gpuImage.src = gpuImageSrc;
-    //     // Remove the 'hidden' class to display the image
-    //     gpuImage.classList.remove("hidden");
-    // } else {
-    //     // If no GPU option is selected (price is zero), hide the image
-    //     gpuImage.classList.add("hidden");
-    // }
-
-
     // Get the selected option elements for each component
     var gpuSelect = document.getElementById("gpu-select");
     var cpuSelect = document.getElementById("cpu-select");
@@ -63,7 +43,7 @@ function calculateTotal() {
     showImage(vgaSelect, "vga-image");
 
     console.log(gpuPrice, gpuSelect)
-    
+
     // console.log(gpuPrice, gpuSelect)
     // var totalPrice = gpuPrice + cpuPrice + motherboardPrice + ssdPrice + pcCasePrice + hardDrivePrice + monitorPrice + ramPrice + vgaPrice;
     // document.getElementById("total-price").textContent = "$" + totalPrice;
@@ -81,20 +61,25 @@ function showImage(selectElement, imageId) {
     var price = parseInt(selectElement.value);
     // Get the image element
     var image = document.getElementById(imageId);
-    // Get the selected option element
-    var selectedOption = selectElement.options[selectElement.selectedIndex];
-    // Get the image source from the selected option's data attribute
-    var imageSrc = selectedOption.getAttribute("data-image");
+    // Check if the image element exists
+    if (image) {
+        // Get the selected option element
+        var selectedOption = selectElement.options[selectElement.selectedIndex];
+        // Get the image source from the selected option's data attribute
+        var imageSrc = selectedOption.getAttribute("data-image");
 
-    // If a valid option is selected (price is not zero)
-    if (price !== 0) {
-        // Update the image source
-        image.src = imageSrc;
-        // Remove the 'hidden' class to display the image
-        image.classList.remove("hidden");
+        // If a valid option is selected (price is not zero)
+        if (price !== 0) {
+            // Update the image source
+            image.src = imageSrc;
+            // Remove the 'hidden' class to display the image
+            image.classList.remove("hidden");
+        } else {
+            // If no option is selected (price is zero), hide the image
+            image.classList.add("hidden");
+        }
     } else {
-        // If no option is selected (price is zero), hide the image
-        image.classList.add("hidden");
+        console.error("Image element with ID '" + imageId + "' not found.");
     }
 }
 
