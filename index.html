@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PC Builder</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
@@ -92,12 +92,21 @@
                 <option value="150">VGA Option 3 ($150)</option>
             </select>
         </section>
+        <section id="powersupply">
+            <h2>POWER SUPPLY</h2>
+            <select id="powersupply-select" onchange="calculateTotal()">
+                <option value="0">Select POWER SUPPLY</option>
+                <option value="50">POWER SUPPLY Option 1 ($50)</option>
+                <option value="100">POWER SUPPLY Option 2 ($100)</option>
+                <option value="150">POWER SUPPLY Option 3 ($150)</option>
+            </select>
+        </section>
 
         <section id="total">
             <h2>Total</h2>
             <p id="total-price">$0</p>
         </section>
     </main>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
