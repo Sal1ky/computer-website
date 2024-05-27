@@ -33,8 +33,6 @@ function calculateTotal() {
     
     // Call function to show or hide image for GPU
     showImage(gpuSelect, "gpu-image");
-    
-    // Similarly, call the function for each component selection
     showImage(cpuSelect, "cpu-image");
     showImage(motherboardSelect, "motherboard-image");
     showImage(ssdSelect, "ssd-image");
@@ -45,14 +43,9 @@ function calculateTotal() {
     showImage(vgaSelect, "vga-image");
     showImage(powersupplySelect, "power-supply-image");
 
-    console.log(gpuPrice, gpuSelect)
-
     // console.log(gpuPrice, gpuSelect)
     var totalPrice = gpuPrice + cpuPrice + motherboardPrice + ssdPrice + pcCasePrice + hardDrivePrice + monitorPrice + ramPrice + vgaPrice + powersupplyPrice;
-    // document.getElementById("total-price").textContent = "$" + totalPrice;
-    // console.log("totalPrice:", totalPrice)
-    // Calculate the total price
-    // var totalPrice = parseInt(gpuSelect.value) + parseInt(cpuSelect.value) ;
+    console.log("powersupplyPrice:", powersupplyPrice)
     console.log("totalPrice:", totalPrice)
     // Update the displayed total price
     document.getElementById("total-price").textContent = "$" + totalPrice;
