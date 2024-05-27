@@ -38,31 +38,40 @@ function calculateTotal() {
     // }
 
 
-        // Get the selected option elements for each component
-        var gpuSelect = document.getElementById("gpu-select");
-        var cpuSelect = document.getElementById("cpu-select");
-        var motherboardSelect = document.getElementById("motherboard-select");
-        var ssdSelect = document.getElementById("ssd-select");
-        var pcCaseSelect = document.getElementById("pc-case-select");
-        var hardDriveSelect = document.getElementById("hard-drive-select");
-        var monitorSelect = document.getElementById("monitor-select");
-        var ramSelect = document.getElementById("ram-select");
-        var vgaSelect = document.getElementById("vga-select");
+    // Get the selected option elements for each component
+    var gpuSelect = document.getElementById("gpu-select");
+    var cpuSelect = document.getElementById("cpu-select");
+    var motherboardSelect = document.getElementById("motherboard-select");
+    var ssdSelect = document.getElementById("ssd-select");
+    var pcCaseSelect = document.getElementById("pc-case-select");
+    var hardDriveSelect = document.getElementById("hard-drive-select");
+    var monitorSelect = document.getElementById("monitor-select");
+    var ramSelect = document.getElementById("ram-select");
+    var vgaSelect = document.getElementById("vga-select");
     
-        // Call function to show or hide image for GPU
-        showImage(gpuSelect, "gpu-image");
+    // Call function to show or hide image for GPU
+    showImage(gpuSelect, "gpu-image");
     
-        // Similarly, call the function for each component selection
-        showImage(cpuSelect, "cpu-image");
-        showImage(motherboardSelect, "motherboard-image");
-        showImage(ssdSelect, "ssd-image");
-        showImage(pcCaseSelect, "pc-case-image");
-        showImage(hardDriveSelect, "hard-drive-image");
-        showImage(monitorSelect, "monitor-image");
-        showImage(ramSelect, "ram-image");
-        showImage(vgaSelect, "vga-image");
+    // Similarly, call the function for each component selection
+    showImage(cpuSelect, "cpu-image");
+    showImage(motherboardSelect, "motherboard-image");
+    showImage(ssdSelect, "ssd-image");
+    showImage(pcCaseSelect, "pc-case-image");
+    showImage(hardDriveSelect, "hard-drive-image");
+    showImage(monitorSelect, "monitor-image");
+    showImage(ramSelect, "ram-image");
+    showImage(vgaSelect, "vga-image");
 
-    var totalPrice = gpuPrice + cpuPrice + motherboardPrice + ssdPrice + pcCasePrice + hardDrivePrice + monitorPrice + ramPrice + vgaPrice;
+    console.log(gpuPrice, gpuSelect)
+    
+    // console.log(gpuPrice, gpuSelect)
+    // var totalPrice = gpuPrice + cpuPrice + motherboardPrice + ssdPrice + pcCasePrice + hardDrivePrice + monitorPrice + ramPrice + vgaPrice;
+    // document.getElementById("total-price").textContent = "$" + totalPrice;
+    // console.log("totalPrice:", totalPrice)
+    // Calculate the total price
+    var totalPrice = parseInt(gpuSelect.value) + parseInt(cpuSelect.value) ;
+    console.log("totalPrice:", totalPrice)
+    // Update the displayed total price
     document.getElementById("total-price").textContent = "$" + totalPrice;
 }
 
