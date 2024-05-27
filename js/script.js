@@ -45,11 +45,11 @@ function calculateTotal() {
     console.log(gpuPrice, gpuSelect)
 
     // console.log(gpuPrice, gpuSelect)
-    // var totalPrice = gpuPrice + cpuPrice + motherboardPrice + ssdPrice + pcCasePrice + hardDrivePrice + monitorPrice + ramPrice + vgaPrice;
+    var totalPrice = gpuPrice + cpuPrice + motherboardPrice + ssdPrice + pcCasePrice + hardDrivePrice + monitorPrice + ramPrice + vgaPrice;
     // document.getElementById("total-price").textContent = "$" + totalPrice;
     // console.log("totalPrice:", totalPrice)
     // Calculate the total price
-    var totalPrice = parseInt(gpuSelect.value) + parseInt(cpuSelect.value) ;
+    // var totalPrice = parseInt(gpuSelect.value) + parseInt(cpuSelect.value) ;
     console.log("totalPrice:", totalPrice)
     // Update the displayed total price
     document.getElementById("total-price").textContent = "$" + totalPrice;
