@@ -61,3 +61,18 @@ select {
     border-radius: 5px;
     text-align: center;
 }
+
+/* CSS for images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto; /* Center the image and add some margin */
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+/* Hide image when no option is selected */
+img.hidden {
+    display: none;
+}

@@ -14,20 +14,22 @@
         <section id="gpu">
             <h2>GPU</h2>
             <select id="gpu-select" onchange="calculateTotal()">
-                <option value="0">Select GPU</option>
-                <option value="200">GPU Option 1 ($200)</option>
-                <option value="300">GPU Option 2 ($300)</option>
-                <option value="400">GPU Option 3 ($400)</option>
+                <option value="0" >Select GPU</option>
+                <option value="200" data-image="images/gpu1.jpg">Graphics Card, 4GB 128bit DDR5 ($200)</option>
+                <option value="300" data-image="images/gpu2.jpg">Graphics Card, 12GB 15 Gbps ($300)</option>
+                <option value="400" data-image="images/gpu3.jpg">Graphics Card, 8GB GDDR6 ($400)</option>
             </select>
+            <img id="gpu-image" class="hidden" src="" alt="GPU Image">
         </section>
         <section id="cpu">
             <h2>CPU</h2>
             <select id="cpu-select" onchange="calculateTotal()">
                 <option value="0">Select CPU</option>
-                <option value="150">CPU Option 1 ($150)</option>
-                <option value="250">CPU Option 2 ($250)</option>
-                <option value="350">CPU Option 3 ($350)</option>
+                <option value="150" data-image="images/cpu1.jpg">AMD Ryzen 7 5800X 8-core ($150)</option>
+                <option value="250" data-image="images/cpu2.jpg">Intel Core i5-13600KF ($250)</option>
+                <option value="350" data-image="images/cpu2.jpg">Intel Core i7-13700KF ($350)</option>
             </select>
+            <img id="cpu-image" class="hidden"  src="" alt="CPU Image">
         </section>
         <section id="motherboard">
             <h2>Motherboard</h2>
